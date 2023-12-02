@@ -4,11 +4,12 @@ function ArticleList({ posts }) {
             <main>
                 <article>
                     {posts.map((post) => {
+                        const { title, date = "January 1, 1970", preview } = post;
                         return (
                             <>
-                                <h3>{post.title}</h3>
-                                <small>{post.date}</small>
-                                <p>{post.preview}</p>
+                                <h3>{title}</h3>
+                                <small>{date}</small>
+                                <p>{preview}</p>
                             </>
                         )
                     })}
